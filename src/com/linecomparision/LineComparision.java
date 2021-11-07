@@ -47,11 +47,21 @@ public class LineComparision {
 		Double length1new = length1;
 		Double length2new = length2;
 
-		boolean chk = length1new.equals(length2new); // checking eqality using equals method
+		boolean chk = length1new.equals(length2new); // checking equality using equals method
 		if (chk == true)
 			System.out.println("these two lines are equal");
 		else
 			System.out.println("these two lines are NOT equal");
 
+		// cheking line 1 is greater lesser or equal to 2nd line
+		int compare = length1new.compareTo(length2new);
+		if (compare < 0) {
+			System.out.println("line1 is lesser than other line2 ");
+		} else if (compare > 0) {
+			System.out.println("line1 is greater than other line2 ");
+		} else if (compare == 0) {
+			System.out.println("line1 is equal to the other line2 ");
+		}
 	}
+
 }
